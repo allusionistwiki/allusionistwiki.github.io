@@ -4,42 +4,110 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>allusionistwiki — wiki portal</title>
+<meta name="description" content="『幻想再帰のアリュージョニスト』作者・最近（saikin）作品群とゆらぎの神話の非公式分析Wikiポータル。">
 <style>
-:root{color-scheme:light dark}
-body{font-family:system-ui,-apple-system,"Segoe UI",Meiryo,sans-serif;margin:0;padding:2rem;max-width:900px;margin-inline:auto;line-height:1.7}
-h1{font-size:1.6rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
-.card{border:1px solid CanvasText;border-radius:.6rem;padding:1rem;opacity:.92;text-decoration:none;color:CanvasText}
-.card h2{margin:.2rem 0;font-size:1.15rem}
-.card p{margin:.3rem 0;font-size:.92rem;opacity:.85}
-.badge{display:inline-block;font-size:.72rem;border:1px solid CanvasText;border-radius:1rem;padding:0 .5rem;opacity:.8}
-footer{margin-top:2rem;font-size:.85rem;opacity:.75}
+:root{color-scheme:light dark;--bg:Canvas;--fg:CanvasText;--muted:color-mix(in srgb,CanvasText 62%,transparent);
+--line:color-mix(in srgb,CanvasText 18%,transparent);--soft:color-mix(in srgb,CanvasText 7%,transparent);
+--accent:#7c4dff;--ok:#1a7f37;--plan:#57606a}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Meiryo,sans-serif;margin:0;padding:0;background:var(--bg);color:var(--fg);line-height:1.7}
+.wrap{max-width:1060px;margin-inline:auto;padding:clamp(1rem,4vw,2.5rem)}
+header{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:1rem}
+header h1{font-size:1.7rem;margin:0;letter-spacing:.02em}
+header .tag{font-size:.8rem;color:var(--muted)}
+.lede{margin:.9rem 0 1.6rem;color:var(--muted);max-width:60ch}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;border-radius:99px;padding:.15rem .6rem;letter-spacing:.03em;border:1px solid var(--line)}
+.b-ok{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,transparent);background:color-mix(in srgb,var(--ok) 8%,transparent)}
+.b-live{color:#0b6fb0;border-color:#0b6fb055;background:#0b6fb012}
+.b-plan{color:var(--plan);border-color:#57606a55;background:#57606a12}
+.b-accent{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.1rem}
+.card{border:1px solid var(--line);border-radius:.9rem;padding:1.2rem 1.25rem;background:var(--soft);display:flex;flex-direction:column;gap:.55rem;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 20px -8px color-mix(in srgb,CanvasText 35%,transparent)}
+.card h2{margin:0;font-size:1.2rem}
+.card .sub{font-size:.82rem;color:var(--muted);margin:0}
+.card .desc{font-size:.92rem;margin:.15rem 0;flex:1}
+.badges{display:flex;flex-wrap:wrap;gap:.35rem}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.25rem}
+.btn{font-size:.85rem;font-weight:600;padding:.42rem .9rem;border-radius:.55rem;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+.btn.ghost{border-color:var(--line);color:var(--muted)}
+.btn:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.layers{display:flex;flex-direction:column;gap:.28rem;font-size:.85rem;border-top:1px dashed var(--line);padding-top:.6rem;margin-top:.25rem}
+.layers .row{display:flex;justify-content:space-between;gap:.5rem;padding:.12rem .25rem;border-radius:.35rem}
+.layers .row:hover{background:color-mix(in srgb,CanvasText 5%,transparent)}
+.layers .st{font-size:.72rem;color:var(--muted);white-space:nowrap}
+section.quick{margin-top:2rem}
+section.quick h3{font-size:1rem;color:var(--muted);margin:0 0 .6rem;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font-size:.85rem;padding:.35rem .85rem;border:1px solid var(--line);border-radius:99px;text-decoration:none;color:inherit}
+.chip:hover{background:var(--soft)}
+footer{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1rem;font-size:.82rem;color:var(--muted)}
+footer p{margin:.25rem 0}
 a{color:inherit}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<h1>allusionistwiki</h1>
-<p>『幻想再帰のアリュージョニスト』および作者・最近（saikin）作品群、ゆらぎの神話の分析 wiki ポータル。</p>
+<div class="wrap">
+<header>
+  <h1>allusionistwiki</h1>
+  <span class="tag">非公式ファン解析Wikiポータル</span>
+</header>
+<p class="lede">『幻想再帰のアリュージョニスト』および作者・最近（saikin）作品群、ゆらぎの神話の解析Wiki群。引喩・パロディ・逆転を原文引用付きで体系化します。</p>
+
 <div class="grid">
   <a class="card" href="/AllusionistWiki/">
     <h2>幻想再帰のアリュージョニスト Wiki</h2>
-    <p>引喩・パロディ・逆転を原文引用付きで体系化する分析Wiki（L7 人間訂正済み公開層）。話ナビ／登場人物／アナロジークレーム／伏線台帳。解析系は <a href="/AllusionistWiki2/">アリュージョニスト Wiki 2</a>。</p>
-    <p><span class="badge">CC BY-NC-SA 4.0</span> <span class="badge">第1話〜</span></p>
+    <p class="sub">L7 人間訂正済みの公開層（本家）</p>
+    <p class="desc">話ナビ／登場人物／アナロジークレーム／伏線台帳。引喩・パロディ・逆転を原文引用付きで体系化します。解析系（自動抽出・審査データ）は隣の Wiki2 へ。</p>
+    <div class="badges"><span class="badge b-live">稼働中</span><span class="badge b-accent">CC BY-NC-SA 4.0</span><span class="badge b-plan">第1話〜</span></div>
+    <div class="btns"><span class="btn">Wiki へ</span><span class="btn ghost">解析系は Wiki2</span></div>
   </a>
-  <a class="card" href="/AllusionistWiki2/">
+
+  <div class="card">
     <h2>アリュージョニスト Wiki 2</h2>
-    <p>表示（最新）層＝L7＋下層Wiki（<a href="/AllusionistWiki2/layers/">下層Wiki索引</a>）。L1Wiki（<code>/l1/</code>）稼働中、L2Wiki〜L6Wiki 準備中（L0〜L7 階層モデル準拠）。LLM 自動抽出・自動審査の解析フック。作業データは <code>AllusionistWiki_work</code> repo。旧 <code>/AllusionistWiki/l1/</code>・<code>/AllusionistLLMWiki2/</code> URL は自動転送。</p>
-    <p><span class="badge">llm_verified</span> <span class="badge">human_verified 昇格中</span></p>
-  </a>
-  <a class="card" href="/YuragiWiki/">
-    <h2>揺らぎの神話 Wiki（準備中）</h2>
-    <p>多人数コラボ創作「ゆらぎの神話」の解析＋記述アーカイブ（mixi・したらば BBS 全取得）。サイト公開は準備中、raw は <code>YuragiWiki</code> repo で公開済み。</p>
-    <p><span class="badge">CC0</span> <span class="badge">raw 出典明記公開</span></p>
+    <p class="sub">表示層（最新）＋解析下層Wiki（L0〜L7 階層モデル）</p>
+    <p class="desc">LLM 自動抽出・自動審査の解析系。名前正規化台帳と原典引用付きクレームを公開。<code>AllusionistWiki_work</code> が作業データ。</p>
+    <div class="layers">
+      <span class="row">表示層（L7 反映）<span class="st">稼働中</span></span>
+      <span class="row">L1Wiki（逐次解析）<span class="st">稼働中</span></span>
+      <span class="row">L2Wiki（名前正規化台帳）<span class="st">稼働中</span></span>
+      <span class="row">L3〜L6Wiki<span class="st">準備中</span></span>
+    </div>
+    <div class="badges"><span class="badge b-ok">llm_verified</span><span class="badge b-ok">human_verified 昇格中</span></div>
+    <div class="btns">
+      <a class="btn" href="/AllusionistWiki2/">Wiki2 へ</a>
+      <a class="btn ghost" href="/AllusionistWiki2/layers/">下層Wiki索引</a>
+    </div>
+  </div>
+
+  <a class="card" href="https://github.com/allusionistwiki/YuragiWiki">
+    <h2>揺らぎの神話 Wiki</h2>
+    <p class="sub">多人数コラボ創作の解析＋記述アーカイブ</p>
+    <p class="desc">mixi・したらば BBS 全取得済み。raw は repo で公開済み、サイト公開は準備中。</p>
+    <div class="badges"><span class="badge b-plan">サイト準備中</span><span class="badge b-accent">CC0</span><span class="badge b-ok">raw 出典明記公開</span></div>
+    <div class="btns"><span class="btn ghost">YuragiWiki repo</span></div>
   </a>
 </div>
+
+<section class="quick">
+  <h3>よく使う入口</h3>
+  <div class="chips">
+    <a class="chip" href="/AllusionistWiki/">本家 Wiki 表面</a>
+    <a class="chip" href="/AllusionistWiki2/">Wiki2 表面</a>
+    <a class="chip" href="/AllusionistWiki2/L1/">L1 逐次解析</a>
+    <a class="chip" href="/AllusionistWiki2/L2/">L2 名前台帳</a>
+    <a class="chip" href="/AllusionistWiki2/L2/reflections/RF_l2_aliases_index.html">名義変換表</a>
+    <a class="chip" href="/AllusionistWiki2/layers/">下層Wiki索引</a>
+    <a class="chip" href="https://github.com/allusionistwiki/AllusionistWiki_work">作業データ repo</a>
+  </div>
+</section>
+
 <footer>
-<p>非公式ファンWiki群です。原作の著作権は原作者に帰属します。原文（小説）は非公開です。</p>
-<p>解析過程（LLM 抽出・審査データ）は各 wiki の下層レイヤーとして公開しています。</p>
+  <p>非公式ファンWiki群です。原作の著作権は原作者に帰属します。原文（小説）は非公開です。</p>
+  <p>解析過程（LLM 抽出・審査データ）は各 wiki の下層レイヤーとして公開しています。</p>
+  <p>旧 URL（<code>/AllusionistWiki/l1/</code>・<code>/AllusionistLLMWiki2/</code>）は自動的に現行版へ転送されます。</p>
 </footer>
+</div>
 </body>
 </html>
